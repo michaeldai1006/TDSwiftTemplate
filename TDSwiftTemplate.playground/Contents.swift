@@ -3,11 +3,13 @@
   
   // View controller that hosts the target view
   class TDLiveViewController : UIViewController {
-    override func loadView() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         // Config background view
         let backgroundView = UIView()
         backgroundView.backgroundColor = .lightGray
-
+        
         // Config sample view
         let sampleView = SampleView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         backgroundView.addSubview(sampleView)
