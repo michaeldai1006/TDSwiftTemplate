@@ -10,8 +10,14 @@
         let backgroundView = UIView()
         backgroundView.backgroundColor = .lightGray
         
+        // Label location
+        let viewWidth: CGFloat = 120.0
+        let viewHeight: CGFloat = 120.0
+        var viewX: CGFloat { get { return self.view.frame.width / 2 - viewWidth / 2 } }
+        var viewY: CGFloat { get { return self.view.frame.height / 2 - viewHeight / 2 } }
+        
         // Config sample view
-        let sampleView = SampleView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let sampleView = SampleView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: viewHeight))
         backgroundView.addSubview(sampleView)
         
         
